@@ -3,7 +3,11 @@
 
 .container__landing {
     padding: 20px;
-    height: 90vh;
+   // height: 80%;
+    height: auto;
+    @include tablet {
+        height: 90%;
+    }
 }
 
 .main__landing {
@@ -60,11 +64,11 @@
 }
 
 .min-height {
-    min-height: 78rem;
+   // min-height: 78rem;
     @include tablet {
-        min-height: 55rem;
+      //  min-height: 55rem;
     }
     @include desktop {
-        min-height: 65rem;
+      //  min-height: 65rem;
     }
 }
