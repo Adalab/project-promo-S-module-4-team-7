@@ -20,7 +20,7 @@ const ProjectItem = ({ eachCard, allCards, index }) => {
   // }
 
   return (
-    <Link>
+    <Link to={`/${eachCard.id}`} >
       <li>
         {/* <section className="pi__icons">
                   <a onClick={deleteCardTest}>

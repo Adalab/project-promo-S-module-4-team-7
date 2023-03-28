@@ -1,12 +1,13 @@
 import "../styles/layout/Landing.scss";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import ProjectList from "./ProjectList";
 import Intro from "./Intro";
+import CardDetail from "./CardDetail";
 
-function Landing({ allCards }) {
-  console.log(allCards);
+function Landing({ allCards, data }) {
+
   return (
     <>
       <div
@@ -17,7 +18,13 @@ function Landing({ allCards }) {
         <Header />
         <main className="main__landing">
           <Intro />
-          <ProjectList allCards={allCards} />
+          <Routes>
+            <Route path="/"></Route>
+            <Route 
+            path="/:cardId"
+            element={<CardDetail allCards={allCards} data={data} />}>
+            </Route>
+          </Routes>
         </main>
       </div>
       <Footer />

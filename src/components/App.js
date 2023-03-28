@@ -9,6 +9,20 @@ import { useState } from "react";
 
 function App() {
   const [allCards, setAllCards] = useState (ls.get('projectsLS', [])); 
+  const [data, setData] = useState(
+    ls.get("lastCard", {
+      name: "",
+      slogan: "",
+      technologies: "",
+      repo: "",
+      demo: "",
+      desc: "",
+      autor: "",
+      job: "",
+      photo: "",
+      image: "",
+    })
+  );
 
   const handleLs = (value) => {
     setAllCards(value)
@@ -19,7 +33,7 @@ function App() {
 
   return(
     <Routes>
-      <Route path="/" element={<Landing allCards={allCards} />}>
+      <Route path="/" element={<Landing allCards={allCards} data={data} />}>
       <Route path="/*" element={<Error404 />}></Route>
       </Route>
       <Route path="/create" element={<CreateProject allCards={allCards} handleLs={handleLs} />}></Route>

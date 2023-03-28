@@ -3,6 +3,7 @@ import ProjectItem from "./ProjectItem";
 
 const ProjectList = ({allCards}) => {
     // Map to show every li
+    debugger
     const projects = allCards.map((eachCard, index) => {
         return <ProjectItem eachCard={eachCard} key={index} allCards={allCards} id={index} />
     });
