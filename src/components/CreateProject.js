@@ -8,7 +8,6 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./Footer.js";
 import GetAvatar from "./GetAvatar";
 import ls from "../services/localStorage";
-import { Link } from "react-router-dom";
 import Intro from "./Intro";
 
 function CreateProject({ allCards, handleLs }) {
@@ -99,9 +98,7 @@ function CreateProject({ allCards, handleLs }) {
     });
   };
 
-  // const updateAvatar = (avatar) => {
-  //   setData({ ...data, photo: avatar });
-  // };
+
 
   const handleInput = (inputValue, inputName) => {
     setData({ ...data, [inputName]: inputValue });

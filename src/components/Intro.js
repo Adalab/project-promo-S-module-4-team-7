@@ -13,9 +13,11 @@ function Intro() {
             Nuevo Proyecto
           </button>
         </Link>
-        <button className="main__landing__container__buttons__button-view-projects">
-          Ver proyectos
-        </button>
+        <Link to="/detailcard">
+          <button className="main__landing__container__buttons__button-view-projects">
+           Ver proyectos
+          </button>
+        </Link>
       </div>
     </div>
   );
