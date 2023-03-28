@@ -14,7 +14,7 @@ function Form({
   updatePhoto,
   updateImages,
   classHidden,
-  handleResetButton
+  handleResetButton,
 }) {
   const handleInputChange = (ev) => {
     handleInput(ev.target.value, ev.target.name);
@@ -32,7 +32,7 @@ function Form({
         <p className='form__ask-info__subtitle'>Cuéntanos sobre el proyecto</p>
         <hr className='form__ask-info__line' />
       </section>
-      <form className="form__project" onSubmit={handleSubmit}>
+      <form className='form__project' onSubmit={handleSubmit}>
         <fieldset className='project'>
           <input
             required
@@ -150,8 +150,12 @@ function Form({
             text='Crear Tarjeta'
             handleClickCreateCard={handleClickCreateCard}
           />
-          <button title="Haz click aquí para empezar desde cero" onClick={handleResetButton} className='button-reset'>
-            <i class='fa fa-refresh'></i>
+          <button
+            title='Haz click aquí para empezar desde cero'
+            onClick={handleResetButton}
+            className='button-reset'>
+            {/* <i class='fa fa-refresh'></i> */}
+            <i class='fa-regular fa-trash-can'></i>
           </button>
 
           <p className='errorMessage'>{errorMessage.photo}</p>
@@ -161,7 +165,7 @@ function Form({
           <span className=''></span>
           <a
             href={`${url}`}
-            className={`card__msg ${classHidden ? 'hidden' : true }`}
+            className={`card__msg ${classHidden ? "hidden" : true}`}
             target='_blank'
             rel='noreferrer'
             onSubmit={handleSubmit}>
