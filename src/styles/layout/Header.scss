@@ -7,14 +7,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: $color-white;
   margin-bottom: 1.5rem;
   @include tablet {
     // margin-bottom: 6.5rem;
   }
 
   &__icon {
-    color: white;
+    color: $color-white;
     font-size: 2rem;
     display: flex;
   }

@@ -30,11 +30,10 @@
    // margin-top: 2rem;
   }
   &__title {
-    color: white;
+    color: $color-white;
     text-align: center;
     font-family: "Montserrat", sans-serif;
    // font-weight: bold;
-    color: white;
     // margin-top: 10px;
     font-weight: 700;
     font-size: 25px;
@@ -48,7 +47,7 @@
   &__ask-info {
     padding: 20px;
     text-align: center;
-    color: white;
+    color: $color-white;
     @include tablet {
     }
 
@@ -94,16 +93,16 @@
 
   &__input {
     font: $font-montserrat-light-12px;
-    background-color: #302c42;
-    border-color: white;
+    background-color: $color-violet;
+    border-color: $color-white;
     border-radius: 40px;
     height: 40px;
-    color: #ffffff;
+    color: $color-white;
     padding-left: 15px;
     padding-top: 3px;
   
     &::placeholder {
-      color: #aaaaaa;
+      color: $color-grey-6;
     }
 
     @include tablet {
@@ -117,10 +116,10 @@
   &__textarea {
     font: $font-montserrat-light-12px;
     height: 100px;
-    background-color: #302c42;
-    border-color: white;
+    background-color: $color-violet;
+    border-color: $color-white;
     border-radius: 40px;
-    color: #ffffff;
+    color: $color-white;
       padding-left: 1rem;
       padding-right: 1rem;
       padding-bottom: 1rem;
@@ -128,7 +127,7 @@
       overflow-y: hidden;
     
       &::placeholder {
-        color: #aaaaaa;
+        color: $color-grey-6;
       }
 
     @include tablet {
@@ -143,7 +142,7 @@
 .ask-info__autor {
     padding: 20px;
       text-align: center;
-      color: white;
+      color: $color-white;
       width: 100%;
 
   &__subtitle {
@@ -206,17 +205,17 @@
 
   &__input {
     font: $font-montserrat-light-12px;
-    background-color: #302c42;
-    border-color: white;
+    background-color: $color-violet;
+    border-color: $color-white;
     border-radius: 40px;
     height: 40px;
-    color: #ffffff;
+    color: $color-white;
     font-size: 12px;
     padding-left: 15px;
     padding-top: 3px;
     
       &::placeholder {
-        color: #aaaaaa;
+        color: $color-grey-6;
       }
     @include tablet {
       
@@ -256,12 +255,11 @@
   &__btn {
     margin: 3px;
     margin-top: 20px;
-    color: white;
+    color: $color-white;
     text-align: center;
     border: none;
     padding: 0 10px;
     height: 38px;
-    // box-shadow: 10px 5px 5px #000;
     background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
     border-radius: 40px;
     display: flex;
@@ -293,13 +291,13 @@
 
   &__btn-large {
     margin-top: 10px;
-    color: white;
+    color: $color-white;
     text-align: center;
     padding: 0 50px;
     height: 43px;
     background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
     border-radius: 40px;
-    border: solid 2px white;
+    border: solid 2px $color-white;
     font-weight: bold;
     cursor: pointer;
 
@@ -330,13 +328,13 @@
     width: 180px;
     height: 2rem;
     border-radius: 40px;
-    color: white;
+    color: $color-white;
     background-color: $color-bottom-gradient-light-violet;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
     font-weight: bold;
-    border: solid 2px white;
+    border: solid 2px $color-white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -360,10 +358,12 @@
 
 .button-reset {
   margin-top: 20px;
-  color: rgb(228, 39, 39);
+  color: $color-red-2;
   padding: 10px;
-  background: white;
-  border-radius: 15rem;
+  background: $color-white;
+  border-radius: 35px;
+  width: 35px;
+  height: 35px;
   border: none;
   cursor: pointer;
 }

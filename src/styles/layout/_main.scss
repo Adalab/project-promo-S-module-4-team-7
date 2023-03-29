@@ -4,12 +4,12 @@
 
 
 html {
-  background-color: #302c42;
+  background-color: $color-violet;
 }
 
 .container {
     margin: 5px;
-    background-color: #302c42;
+    background-color: $color-violet;
     // height: 100vh;
     padding: 15px 15px;
     height: 100%;
@@ -83,13 +83,13 @@ html {
 }
 
 .header__link {
-  color: red;
+  color: $color-red;
 }
 
   .errorMessage {
     text-align: center;
     font: $font-poppins-ligth-10px;
-    color: #ff4747;
+    color: $color-red-2;
     margin: auto;
     @include tablet {
       font-size: 12px;

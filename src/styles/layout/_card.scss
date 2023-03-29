@@ -4,7 +4,7 @@
 @import "../core/variables";
 .author {
   background-color: rgb(255, 255, 255);
-  color: #3e3e3e;
+  color: $color-dark-grey;
   width: 80vw;
   min-height: 26vw;
   transform: translateY(-50px);
@@ -186,7 +186,7 @@
     }
     &__name {
       font-size: 16px;
-      color: black;
+      color: $color-black;
       font-size: 14px;
       font-weight: bold;
       margin-bottom: 20px;
