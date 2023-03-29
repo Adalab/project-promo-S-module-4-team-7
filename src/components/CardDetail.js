@@ -1,7 +1,8 @@
 import Header from "./Header";
  import cover from "../images/cover.jpeg";
+import Card from "./Card";
 
-const CardDetail = ({allCards, data}) => {
+const CardDetail = ({data}) => {
     return (
         <>
             <Header></Header>
