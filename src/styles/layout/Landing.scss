@@ -4,14 +4,15 @@
 .container__landing {
     padding: 20px;
    // height: 80%;
-    height: auto;
+    min-height: 90vh;
+   // height: auto;
     @include tablet {
-        height: 90%;
+      //  height: 90%;
     }
 }
 
 .main__landing {
-    height: 90%;
+    //height: 90%;
     &__container {
     margin-top: 2rem;
     display: flex;
