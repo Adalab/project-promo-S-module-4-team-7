@@ -36,14 +36,14 @@
   
     &__subtitle {
       
-      font-size: 8px;
-      color: $color-violet;
+      font-size: 10px;
+      color: $color-violeta;
       text-align: left;
       text-transform: capitalize;
       text-decoration: wavy;
       @include tablet {
         margin-top: 33px;
-        font-size: 10px;
+        font-size: 12px;
       }
     }
     &__title {
@@ -61,6 +61,7 @@
     &__desc {
       font-size: 12px;
       color: $color-grey-2;
+      overflow-y: scroll;
       @include tablet {
         font-size: 12px;
         line-height: 1.76;

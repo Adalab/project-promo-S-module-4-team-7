@@ -89,7 +89,8 @@ html {
   .errorMessage {
     text-align: center;
     font: $font-poppins-ligth-10px;
-    color: $color-red-2;
+    //color: $color-red-2;
+    color: $color-violet;
     margin: auto;
     @include tablet {
       font-size: 12px;

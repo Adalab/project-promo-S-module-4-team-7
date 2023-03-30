@@ -35,7 +35,7 @@
   }
 
   &__title {
-    color: $color-white;
+    color: $color-texto2;
     text-align: center;
     font-family: "Montserrat", sans-serif;
     // font-weight: bold;
@@ -43,6 +43,7 @@
     // margin-top: 10px;
     font-weight: 700;
     font-size: 25px;
+    margin-top: 15px;
 
     @include tablet {}
 
@@ -75,10 +76,10 @@
       width: 100%;
       border: 0;
       height: 1px;
-      background-image: linear-gradient(to right,
-          rgba(255, 255, 255, 0),
-          rgba(255, 255, 255, 0.75),
-          rgba(255, 255, 255, 0));
+      // background-image: linear-gradient(to right,
+      //     rgba(255, 255, 255, 0),
+      //     rgba(255, 255, 255, 0.75),
+      //     rgba(255, 255, 255, 0));
 
       @include tablet {}
     }
@@ -97,9 +98,11 @@
   }
 
   &__label {
-    font: $font-montserrat-light-12px;
-    color: #FFFFFF;
-    font-weight: 600;
+    //font: $font-montserrat-light-12px;
+    font-family:'Montserrat', sans-serif ;
+    font-size: 14px;
+    color:$color-texto2;
+    font-weight: 450;
     padding-left: 15px;
     // padding-top: 3px;
     // height: 40px;
@@ -107,8 +110,8 @@
 
   &__input {
     font: $font-montserrat-light-12px;
-    background-color: $color-violet;
-    border-color: $color-white;
+    background-color: $color-violeta;
+    border-color: $color-texto2;
     border-radius: 40px;
     height: 40px;
     color: $color-white;
@@ -127,7 +130,7 @@
   &__textarea {
     font: $font-montserrat-light-12px;
     height: 100px;
-    background-color: $color-violet;
+    background-color: $color-violeta;
     border-color: $color-white;
     border-radius: 40px;
     color: $color-white;
@@ -206,7 +209,7 @@
 
   &__input {
     font: $font-montserrat-light-12px;
-    background-color: $color-violet;
+    background-color: $color-violeta;
     border-color: $color-white;
     border-radius: 40px;
     height: 40px;
@@ -232,12 +235,14 @@
 }
 
 .buttons-img {
-  font: $font-montserrat-regular-10px;
+  
+  //font: $font-montserrat-regular-10px;
   margin-top: 5px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  font-family: 'Montserrat';
   font-size: 0.8rem;
   padding: 0 10px;
   font-weight: bold;
@@ -260,14 +265,14 @@
     text-align: center;
     border: none;
     padding: 0 10px;
-    height: 38px;
+    height: 42px;
     // box-shadow: 10px 5px 5px #000;
     background: linear-gradient(90deg, #8176AF -1.57%, #C0B7E8 98.43%);
     border-radius: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
+    //font-weight: bold;
     cursor: pointer;
 
     @include tablet {
@@ -292,15 +297,18 @@
   margin-bottom: 2rem;
 
   &__btn-large {
+    font-family: 'Montserrat';
+    font-size: 0.8rem;
     margin-top: 10px;
     color: $color-white;
     text-align: center;
     padding: 0 50px;
     height: 43px;
-    background: linear-gradient(90deg, #8176AF -1.57%, #C0B7E8 98.43%);
+    background-color:#302c42 ;
+    //background: linear-gradient(90deg, #8176AF -1.57%, #C0B7E8 98.43%);
     border-radius: 40px;
     border: solid 2px $color-white;
-    font-weight: bold;
+    //font-weight: bold;
     cursor: pointer;
 
     @include tablet {
@@ -361,7 +369,9 @@
   color: rgb(228, 39, 39);
   padding: 10px;
   background: $color-white;
-  border-radius: 15rem;
+  border-radius: 35px;
+  width: 35px;
+  height: 35px;
   border: none;
   cursor: pointer;
 }
