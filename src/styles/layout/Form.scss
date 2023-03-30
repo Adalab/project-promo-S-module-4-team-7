@@ -267,7 +267,7 @@
     padding: 0 10px;
     height: 42px;
     // box-shadow: 10px 5px 5px #000;
-    background: linear-gradient(90deg, #8176AF -1.57%, #C0B7E8 98.43%);
+    background-color: #907ba2;
     border-radius: 40px;
     display: flex;
     justify-content: center;
@@ -310,6 +310,9 @@
     border: solid 2px $color-white;
     //font-weight: bold;
     cursor: pointer;
+    &:hover {
+      background-color: #907ba2;
+    }
 
     @include tablet {
       padding: 0 40px;
