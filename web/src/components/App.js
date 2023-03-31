@@ -4,18 +4,26 @@ import Landing from "./Landing";
 import CreateProject from "./CreateProject"; 
 import Error404 from "./Error404";
 import ls from '../services/localStorage';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DetailCard from "./DetailCard";
+import api from "../services/api";
 
 
 function App() {
-  const [allCards, setAllCards] = useState (ls.get('projectsLS', [])); 
+  const [allCards, setAllCards] = useState([]); 
+
+  useEffect(() => {
+    api.listProjectsApi().then(cleanData => {
+      console.log(cleanData, 'cleanData')
+      setAllCards(cleanData);
+    });
+  }, []);
+  
+  console.log(allCards, 'en app')
 
   const handleLs = (value) => {
     setAllCards(value)
   }
-
-  
 
   //Aqui la variable de estado del lS
   // Lifting con el array de proyectos y la fx para modificar la variable de estado del lS 
