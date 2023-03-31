@@ -16,7 +16,7 @@ let connection;
 
 mysql
   .createConnection({
-    host: 'localhost',
+    host: 'sql.freedb.tech',
     database: 'freedb_grupo7',
     user: 'freedb_root_grupo7',
     password: 'KWuEnYU9W2Nc%5a',
@@ -37,19 +37,18 @@ mysql
   });
 
   app.get('/api/projects/all', (req, res) => {
-  connection
-    .query('SELECT * FROM projects')
-    .then(([results, fields]) => {
-      console.log('Información recuperada:');
-      results.forEach((result) => {
-        console.log(result);
+    let sql = 'SELECT * FROM projects,authors WHERE projects.fkIdAuthor = authors.idauthor';
+    connection
+      .query(sql)
+      .then(([results, fields]) => {
+        console.log('Información recuperada:');
+        results.forEach((result) => {
+          console.log(result);
+        });
+
+        res.json(results);
+      })
+      .catch((err) => {
+        throw err;
       });
-
-      res.json(results);
-    })
-    .catch((err) => {
-      throw err;
-    });
-});
-
-// TERMINAR EL SELECT LINEA 41
+})
