@@ -23,7 +23,7 @@ function Card({ data }) {
           {data.slogan || "Diseños Exclusivos"}
         </p>
         <p className="author__ip__desc">
-          {data.desc ||
+          {data.description ||
             `Lorem ipsum dolor sit amet, consectetur
               adipiscing elit. Amet faucibus commodo
               tellus lectus lobortis.`}
@@ -56,7 +56,7 @@ function Card({ data }) {
       <section className="author__ia">
         <img className="author__ia__image" src={data.image || user} alt="" />
         <p className="author__ia__job">{data.job || "Full Stack Developer"}</p>
-        <p className="author__ia__name">{data.autor || "Emmelie Björklund"}</p>
+        <p className="author__ia__name">{data.author || "Emmelie Björklund"}</p>
       </section>
     </section>
   );

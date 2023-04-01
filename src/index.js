@@ -20,6 +20,7 @@ mysql
     database: 'freedb_grupo7',
     user: 'freedb_root_grupo7',
     password: 'KWuEnYU9W2Nc%5a',
+    idleTimeout: 1000000,
   })
   .then(conn => {
     connection = conn;

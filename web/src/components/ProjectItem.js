@@ -40,7 +40,7 @@ const ProjectItem = ({ eachCard, allCards, index }) => {
             {eachCard.slogan || "Diseños Exclusivos"}
           </p>
           <p className="author__ip__desc">
-            {eachCard.desc ||
+            {eachCard.description ||
               `Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Amet faucibus commodo
                     tellus lectus lobortis.`}
@@ -61,12 +61,12 @@ const ProjectItem = ({ eachCard, allCards, index }) => {
         </section>
 
         <section className="author__ia">
-          <img className="author__ia__image" src={eachCard.photo} alt="" />
+          <img className="author__ia__image" src={eachCard.image} alt="" />
           <p className="author__ia__job">
             {eachCard.job || "Full Stack Developer"}
           </p>
           <p className="author__ia__name">
-            {eachCard.autor || "Emmelie Björklund"}
+            {eachCard.author || "Emmelie Björklund"}
           </p>
         </section>
       </section>
