@@ -14,7 +14,7 @@ A continuación, exponemos las herramientas 🛠️ que hemos manejado, durante 
 - ZEPLIN 🔎
 - VISUAL STUDIO CODE (VSC) 🗄️
 - HTML 📌
-- CSS 🕹️ **(PONERLO MÁS EXPLICATIVO: LENGUAJE DE ESTILOS?¿)**
+- SCSS 🕹️
 - GIT / GITHUB 📂
 - SASS / SCSS 🔗
 - GULP 🖌️
