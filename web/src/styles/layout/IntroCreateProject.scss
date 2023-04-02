@@ -5,11 +5,12 @@
         font: $font-montserrat-bold-12px;
         border: none;
         text-transform: uppercase;
-        color: $color-white;
+        color: $color-violet;
         border-radius: 20px;
-        background-color: #907ba2;
+        background-color: $color-white;
         padding: 0.5rem;
         animation: wiggle 3s infinite;
+    
         &:hover {
             cursor: pointer;
         }

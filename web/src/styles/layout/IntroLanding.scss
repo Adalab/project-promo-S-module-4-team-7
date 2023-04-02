@@ -35,7 +35,7 @@
                 text-transform: uppercase;
                 color: $color-violet;
                 border-radius: 20px;
-                background-image: linear-gradient(to bottom, $color-white, $color-white), linear-gradient(to bottom, $color-white 0%, rgba(0, 0, 0, 0));
+                background-color: $color-white;
                 padding: 0.5rem;
                 animation: wiggle 3s infinite;
 
