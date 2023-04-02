@@ -1,4 +1,4 @@
-function Button ({className,text, handleClickCreateCard}) {
+function Button ({className, text, handleClickCreateCard}) {
     return (
         <button 
         className={className}

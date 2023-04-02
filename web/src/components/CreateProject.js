@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./Footer.js";
 import GetAvatar from "./GetAvatar";
 import ls from "../services/localStorage";
-import Intro from "./Intro";
+import IntroCreateProject from "./IntroCreateProject";
 
 function CreateProject({ allCards, handleLs }) {
   const [data, setData] = useState(
@@ -187,7 +187,7 @@ function CreateProject({ allCards, handleLs }) {
     <div className="App">
       <div className="container">
         <Header />
-        <Intro />
+        <IntroCreateProject />
         <main className="main">
           <Preview data={data} />
           <Routes>

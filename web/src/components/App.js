@@ -14,12 +14,10 @@ function App() {
 
   useEffect(() => {
     api.listProjectsApi().then(cleanData => {
-      console.log(cleanData, 'cleanData')
       setAllCards(cleanData);
     });
   }, []);
   
-  console.log(allCards, 'en app')
 
   const handleLs = (value) => {
     setAllCards(value)

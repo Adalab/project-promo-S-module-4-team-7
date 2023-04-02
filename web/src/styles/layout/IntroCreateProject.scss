@@ -1,0 +1,16 @@
+@import "../core/mixins";
+@import "../core/variables";
+
+.main__landing__container__buttons__button-view-projects {
+        font: $font-montserrat-bold-12px;
+        border: none;
+        text-transform: uppercase;
+        color: $color-white;
+        border-radius: 20px;
+        background-color: #907ba2;
+        padding: 0.5rem;
+        animation: wiggle 3s infinite;
+        &:hover {
+            cursor: pointer;
+        }
+}

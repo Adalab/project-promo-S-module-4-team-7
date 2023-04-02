@@ -1,0 +1,48 @@
+@import "../core/mixins";
+@import "../core/variables";
+
+.main__landing {
+    //height: 90%;
+
+    &__container {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 2.5rem;
+
+        &__title {
+            font: $font-montserrat-bold-40px;
+        }
+
+        &__subtitle {
+            font: $font-montserrat-light-18px;
+            margin-top: 1rem;
+            padding: 0 2rem;
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1.2rem;
+
+            &__button-new-project {
+                font: $font-montserrat-bold-12px;
+                border: none;
+                text-transform: uppercase;
+                color: $color-violet;
+                border-radius: 20px;
+                background-image: linear-gradient(to bottom, $color-white, $color-white), linear-gradient(to bottom, $color-white 0%, rgba(0, 0, 0, 0));
+                padding: 0.5rem;
+                animation: wiggle 3s infinite;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

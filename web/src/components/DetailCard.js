@@ -1,5 +1,5 @@
 import Header from "./Header";
-import Intro from "./Intro";
+import Intro from "./IntroLanding";
 import cover from "../images/cover.jpeg";
 import user from "../images/user.svg";
 import "../styles/layout/DetailCard.scss";

@@ -1,6 +1,7 @@
+import "../styles/layout/IntroLanding.scss";
 import { Link } from "react-router-dom";
 
-function Intro() {
+function IntroLanding() {
   return (
     <div className="main__landing__container">
       <h1 className="main__landing__container__title">Proyectos Molones</h1>
@@ -13,14 +14,9 @@ function Intro() {
             Nuevo Proyecto
           </button>
         </Link>
-        <Link to="/detailcard">
-          <button className="main__landing__container__buttons__button-view-projects">
-           Ver proyectos
-          </button>
-        </Link>
       </div>
     </div>
   );
 }
 
-export default Intro;
+export default IntroLanding;
