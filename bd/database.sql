@@ -121,3 +121,4 @@ on authors.idauthor = projects.fkIdAuthor;
 
  SELECT * FROM projects; 
 
+ SELECT * FROM authors; 

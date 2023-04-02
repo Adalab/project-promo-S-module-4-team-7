@@ -40,7 +40,7 @@ const ProjectItem = ({ eachCard, allCards, index }) => {
             {eachCard.slogan || "Diseños Exclusivos"}
           </p>
           <p className="author__ip__desc">
-            {eachCard.description ||
+            {eachCard.desc ||
               `Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit. Amet faucibus commodo
                     tellus lectus lobortis.`}

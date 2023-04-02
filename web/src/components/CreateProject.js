@@ -98,8 +98,6 @@ function CreateProject({ allCards, handleLs }) {
     });
   };
 
-
-
   const handleInput = (inputValue, inputName) => {
     setData({ ...data, [inputName]: inputValue });
 
@@ -175,8 +173,8 @@ function CreateProject({ allCards, handleLs }) {
       technologies: "",
       repo: "",
       demo: "",
-      desc: "",
-      autor: "",
+      description: "",
+      author: "",
       job: "",
       photo: "",
       image: "",

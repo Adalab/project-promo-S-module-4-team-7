@@ -23,7 +23,7 @@ function Form({
     ev.preventDefault();
   };
 
-return (
+  return (
     <section className="form">
       <h2 className="form__title">Información</h2>
       <section className="form__ask-info">
@@ -197,6 +197,6 @@ return (
       </form>
     </section>
   );
-};
+}
 
 export default Form;
