@@ -65,11 +65,11 @@ npm run docs
 
 **En la realización de este proyecto han participado:**
 
-- [Almudena Lloret Gallego:](https://github.com/AlmuLloret)
-- [Irene Mezquita:](https://github.com/irenemez)
-- [Patricia Montes De Oca:](https://github.com/patriciabog)
-- [Virginia Lucero:](https://github.com/Virlucero)
-- [Enrica Garcia:](https://github.com/ErriGarcia)
+- [Almudena Lloret Gallego](https://github.com/AlmuLloret)
+- [Irene Mezquita](https://github.com/irenemez)
+- [Patricia Montes De Oca](https://github.com/patriciabog)
+- [Virginia Lucero](https://github.com/Virlucero)
+- [Enrica Garcia](https://github.com/ErriGarcia)
 
 #### -- ¿Quieres aportar algo más? --
 
