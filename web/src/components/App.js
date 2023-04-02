@@ -30,9 +30,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Landing allCards={allCards} />}></Route>
       <Route path="/detailcard" element={<DetailCard></DetailCard>}></Route>
-      {/* <Route path="/*" element={<Error404 />}></Route> */}
       <Route path="/create" element={<CreateProject allCards={allCards} handleLs={handleLs} />}></Route>
-      {/* <Route path="/create/*" element={<Error404 />}></Route> */}
+      <Route path='*' element={<Error404></Error404>}></Route>
     </Routes>
 
   );

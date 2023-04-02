@@ -1,4 +1,4 @@
-import "../styles/layout/Error.scss";
+import "../styles/layout/Error404.scss";
 import { Link } from "react-router-dom";
 import errorGif from "../images/error404.gif";
 

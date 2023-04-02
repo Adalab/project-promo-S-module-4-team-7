@@ -8,6 +8,7 @@
     justify-content: center;
     color: $color-white;
     height: 90vh;
+
     @include tablet {
         padding: 40px;
     }
@@ -17,7 +18,8 @@
     }
     &__image {
     width: 20rem;
-    margin: auto;  
+    margin: auto;
+
     @include desktop {
         width: 30rem;
         margin: 0;
@@ -47,6 +49,13 @@
         font: $font-poppins-medium-14px;
         &__home, &__new-project {
             color: $color-white;
+        }
+    }
+    .container {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 }
