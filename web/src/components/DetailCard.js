@@ -1,6 +1,6 @@
 import Header from "./Header";
-import Intro from "./IntroLanding";
-import cover from "../images/cover.jpeg";
+import IntroLanding from "./IntroLanding";
+import cover1 from "../images/cover1.jpeg";
 import user from "../images/user.svg";
 import "../styles/layout/DetailCard.scss";
 import Footer from "./Footer";
@@ -10,11 +10,11 @@ function DetailCard({}) {
         <>
         <div className="container__landing-detailcard">
             <Header></Header>
-            <Intro></Intro>
+            <IntroLanding></IntroLanding>
 
             {/* PREVIEW */}
             <section className='preview'>
-                <img className='image' src={cover} alt='' />
+                <img className='image' src={cover1} alt='' />
                 
                 {/* CARD */}
                 <section className="author">

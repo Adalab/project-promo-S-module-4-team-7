@@ -1,12 +1,11 @@
- import cover from "../images/cover.jpeg";
+ import cover1 from "../images/cover1.jpeg";
 
  import Card from "./Card";
 
  function Preview ({data}) {
     return ( 
         <section className='preview'>
-          <img className='image' src={data.photo || cover} alt='' />
-
+          <img className='image' src={data.photo || cover1} alt='cover example' />
           {/*   Card -  Almu */}
           <Card
           data={data}

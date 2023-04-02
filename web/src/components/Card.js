@@ -1,5 +1,5 @@
-import "../styles/layout/_card.scss";
-import user from "../images/user.svg";
+import "../styles/layout/Card.scss";
+import user from "../images/usertest.jpeg";
 
 function Card({ data }) {
   const urlDemo = data.demo.includes("https://")
