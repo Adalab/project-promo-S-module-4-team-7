@@ -72,9 +72,9 @@ function CreateProject({ allCards, handleLs }) {
         setClassHidden(false);
         // Añado el nuevo proy
         ls.set("lastCard", data);
-        handleLs([...allCards, data]);
+        //handleLs([...allCards, data]);
 
-        ls.set("projectsLS", allCards);
+        //ls.set("projectsLS", allCards);
 
         console.log(url);
         console.log(data);
@@ -173,8 +173,8 @@ function CreateProject({ allCards, handleLs }) {
       technologies: "",
       repo: "",
       demo: "",
-      description: "",
-      author: "",
+      desc: "",
+      autor: "",
       job: "",
       photo: "",
       image: "",

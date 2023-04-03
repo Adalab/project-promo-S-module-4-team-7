@@ -163,13 +163,6 @@ function Form({
             updateAvatar={updateImages}
             handleClickCreateCard={handleClickCreateCard}
           />
-        </section>
-        <section className="buttons-img-2">
-          <Button
-            className="buttons-img-2__btn-large"
-            text="Crear Tarjeta"
-            handleClickCreateCard={handleClickCreateCard}
-          />
           <button
             title="Haz click aquí para empezar desde cero"
             onClick={handleResetButton}
@@ -178,6 +171,15 @@ function Form({
             {/* <i class='fa fa-refresh'></i> */}
             <i class="fa-regular fa-trash-can"></i>
           </button>
+        </section>
+
+        <section className="buttons-img-2">
+          <Button
+            className="buttons-img-2__btn-large"
+            text="Crear Tarjeta"
+            handleClickCreateCard={handleClickCreateCard}
+          />
+
           <p className="errorMessage">{errorMessage.photo}</p>
           <p className="errorMessage">{errorMessage.image}</p>
         </section>
