@@ -25,9 +25,9 @@
 .container__landing-detailcard .preview .image {
     object-fit: cover;
     width: 80%;
-    height: 800px;
+    height: 40%;
     margin-top: 60px;
     @include tablet {
-
+        height: 800px;
     }
 }
