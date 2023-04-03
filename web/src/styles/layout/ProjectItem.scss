@@ -1,22 +1,25 @@
 @import "../core/mixins";
 @import "../core/variables";
 
+
 .pi{
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     
     
 }
 .pi__icons{
     display: flex;
     flex-direction: column;
-    
     color:rgb(255, 255, 255); 
     font-size: 20px;
     margin-left: 10px;
+    gap:10px; 
+    transform: translateY(30px);
 }
 
-.fa-expand{
-    margin-left: 10px;
-    color:rgb(255, 255, 255); 
-}
+
+// .fa-pen-to-square{
+//     color:rgb(255, 255, 255); 
+// }

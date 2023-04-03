@@ -19,15 +19,15 @@ const ProjectItem = ({ eachCard, allCards, index }) => {
   // }
 
   return (
-    <li>
-      {/* <section className="pi__icons">
-                <a onClick={deleteCardTest}>
-                    <i className="fa-regular fa-circle-xmark"></i>
-                </a>
-                <a href={`${eachCard.urlD}`} target='_blank'>
-                    <i className="fa-solid fa-expand"></i>
-                </a>
-            </section> */}
+    <li className="pi">
+      <section className="pi__icons">
+        <a>
+          <i className="fa-regular fa-circle-xmark"></i>
+        </a>
+        <a>
+          <i className="fa-regular fa-pen-to-square"></i>
+        </a>
+      </section>
       <section className="author">
         <section className="author__ip">
           <p className="author__ip__subtitle">{eachCard.name}</p>
@@ -66,7 +66,7 @@ const ProjectItem = ({ eachCard, allCards, index }) => {
             {eachCard.job || "Full Stack Developer"}
           </p>
           <p className="author__ia__name">
-            {eachCard.author || "Emmelie Björklund"}
+            {eachCard.autor || "Emmelie Björklund"}
           </p>
         </section>
       </section>
