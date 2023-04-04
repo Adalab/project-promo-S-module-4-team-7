@@ -79,12 +79,24 @@ app.post("/api/projects/add", (req, res) => {
     ];
 
     connection.query(sqlProjects, valuesProject).then(([results, fields]) => {
-      let response = {
+      if (data.name && data.desc && data.slogan && data.repo && data.demo) {
+        console.log('hola');
+        let response = {
         success: true,
         cardURL: `http://localhost:4000/api/projects/${results.insertId}`,
       };
       console.log(results);
       res.json(response);
+
+      }else {
+        let responseFalse = {
+        success: false,
+        cardURL: `http://localhost:4000/api/projects/${results.insertId}`,
+      };
+       res.json(responseFalse)
+
+      }
+      
     });
   });
 });
