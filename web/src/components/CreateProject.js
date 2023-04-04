@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import dataApi from "../services/api.js";
+import api from "../services/api.js";
 import Header from "./Header";
 import Preview from "./Preview";
 import Form from "./Form";
@@ -62,7 +62,7 @@ function CreateProject({ allCards, handleLs }) {
     console.log(url);
     console.log(data);
 
-    dataApi(data).then((info) => {
+    api.dataApi(data).then((info) => {
       console.log("info~~~~~~~");
       console.log(info);
       if (info.success === true) {

@@ -54,7 +54,7 @@ function Card({ data }) {
       </section>
 
       <section className="author__ia">
-        <img className="author__ia__image" src={data.image || user} alt="" />
+        <img className="author__ia__image" src={data.photo || user} alt="" />
         <p className="author__ia__job">{data.job || "Full Stack Developer"}</p>
         <p className="author__ia__name">{data.autor || "Emmelie Björklund"}</p>
       </section>
