@@ -44,7 +44,7 @@ const ProjectItem = ({ eachCard, allCards, index }) => {
         </section>
 
         <section className="author__ia">
-          <img className="author__ia__image" src={eachCard.image} alt="" />
+          <img className="author__ia__image" src={eachCard.photo} alt="" />
           <p className="author__ia__job">
             {eachCard.job || "Full Stack Developer"}
           </p>
