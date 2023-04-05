@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
 import "../styles/layout/ProjectItem.scss";
 
 const ProjectItem = ({ eachCard, allCards, index }) => {
+  const url = "http://localhost:4000/api/projects/detail/" + eachCard.idprojects
   return (
-    <li className="pi">
+    <Link to={url}>
+      <li className="pi">
       <section className="pi__icons">
         <a>
           <i className="fa-regular fa-circle-xmark"></i>
@@ -53,7 +56,8 @@ const ProjectItem = ({ eachCard, allCards, index }) => {
           </p>
         </section>
       </section>
-    </li>
+      </li>
+    </Link>
   );
 };
 
