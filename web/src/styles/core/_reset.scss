@@ -105,15 +105,18 @@ menu,
 nav,
 section {
     display: block;
+    text-decoration:none; 
 }
 
 body {
     line-height: 1;
+    text-decoration:none; 
 }
 
 ol,
 ul {
     list-style: none;
+    text-decoration:none; 
 }
 
 blockquote,

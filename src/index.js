@@ -58,18 +58,15 @@ app.get("/api/projects/all", (req, res) => {
     });
 });
 
-app.post("/api/projects/add", (req, res) => {
+app.post(“/api/projects/add”, (req, res) => {
   const data = req.body;
   console.log(data);
-  
-  
     if (data.name && data.desc && data.slogan && data.repo && data.demo && data.technologies && data.image && data.autor && data.job && data.photo) {
-      let sqlAuthor = "INSERT INTO authors (autor, job, photo) VALUES (?, ?, ?)";
+      let sqlAuthor = “INSERT INTO authors (autor, job, photo) VALUES (?, ?, ?)“;
       let valuesAuthor = [data.autor, data.job, data.photo];
-
   connection.query(sqlAuthor, valuesAuthor).then(([results, fields]) => {
     console.log(results);
-
+      let sqlProjects = “INSERT INTO projects (name, slogan, technologies, demo, repo, `desc`, image, fkIdAuthor) VALUES (?, ?, ?, ?, ?, ?, ?, ?)“;
       let valuesProject = [
       data.name,
       data.desc,
@@ -80,21 +77,14 @@ app.post("/api/projects/add", (req, res) => {
       data.image,
       results.insertId,
       ];
-      
-
       connection.query(sqlProjects, valuesProject).then(([results, fields]) => {
-
         let response = {
         success: true,
         cardURL: `http://localhost:4000/api/projects/${results.insertId}`,
         };
         console.log(results);
         res.json(response);
-
-      
       });
-    
-    
   });
   } else {
         let responseFalse = {
@@ -106,7 +96,8 @@ app.post("/api/projects/add", (req, res) => {
 
 app.get("/api/projects/detail/:projectID", (req, res) => {
   const projectID = req.params.projectID;
-  const sql = "SELECT * FROM projects, authors WHERE projects.fkIdAuthor = authors.idauthor AND idprojects = ?"
+  const sql =
+    "SELECT * FROM projects, authors WHERE projects.fkIdAuthor = authors.idauthor AND idprojects = ?";
 
   connection
     .query(sql, [projectID])
@@ -115,9 +106,23 @@ app.get("/api/projects/detail/:projectID", (req, res) => {
     })
     .catch((err) => {
       throw err;
-    })
+    });
 });
 
+// delete project
+app.delete("/api/projects/delete/:projectID", (req, res) => {
+  const projectID = req.params.projectID;
+  let sql = "DELETE FROM projects WHERE idprojects = ?; ";
+  connection
+    .query(sql, [projectID])
+    .then(([results, fields]) => {
+      console.log("Proyecto eliminado");
+      res.json(results);
+    })
+    .catch((err) => {
+      throw err;
+    });
+});
 
 app.use(express.static("./src/public-react"));
 app.use(express.static("./src/public-css/"));

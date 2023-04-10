@@ -120,8 +120,14 @@ FROM authors inner join projects
 on authors.idauthor = projects.fkIdAuthor; 
 
  SELECT * FROM projects; 
+  SELECT * FROM projects; 
 
  SELECT * FROM authors; 
  
  ALTER TABLE projects 
 ADD  infoURL VARCHAR(1024); 
+
+
+DELETE FROM projects WHERE idprojects = 29; 
+
+

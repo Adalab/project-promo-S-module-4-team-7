@@ -3,6 +3,7 @@
 @import "../core/mixins";
 @import "../core/variables";
 .author {
+  text-decoration:none; 
   background-color: #F4EEED;
   color: $color-dark-grey;
   width: 80vw;
