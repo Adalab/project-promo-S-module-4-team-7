@@ -4,7 +4,7 @@ import "../styles/layout/ProjectItem.scss";
 const ProjectItem = ({ eachCard, allCards, index }) => {
   const url = "http://localhost:4000/api/projects/detail/" + eachCard.idprojects
   return (
-    <Link to={url}>
+    <a href={url}>
       <li className="pi">
       <section className="pi__icons">
         <a>
@@ -57,7 +57,7 @@ const ProjectItem = ({ eachCard, allCards, index }) => {
         </section>
       </section>
       </li>
-    </Link>
+    </a>
   );
 };
 
