@@ -66,7 +66,9 @@ app.post(“/api/projects/add”, (req, res) => {
       let valuesAuthor = [data.autor, data.job, data.photo];
   connection.query(sqlAuthor, valuesAuthor).then(([results, fields]) => {
     console.log(results);
-      let sqlProjects = “INSERT INTO projects (name, slogan, technologies, demo, repo, `desc`, image, fkIdAuthor) VALUES (?, ?, ?, ?, ?, ?, ?, ?)“;
+
+      let sqlProjects = "INSERT INTO projects (name, slogan, technologies, demo, repo, `desc`, image, fkIdAuthor) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+      
       let valuesProject = [
       data.name,
       data.desc,
