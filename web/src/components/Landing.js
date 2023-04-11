@@ -7,6 +7,7 @@ import IntroLanding from "./IntroLanding";
 
 function Landing({ allCards }) {
   console.log(allCards);
+
   return (
     <>
       <div className="container__landing">

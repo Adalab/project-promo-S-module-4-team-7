@@ -1,26 +1,31 @@
-import { Link } from "react-router-dom";
 import "../styles/layout/ProjectItem.scss";
 
 const ProjectItem = ({ eachCard, allCards, index }) => {
   const url =
     "http://localhost:4000/api/projects/detail/" + eachCard.idprojects;
+
+  const handleDeleteProject = (ev) => {
+    console.log("hola");
+  };
+
   return (
-    <a href={url}>
-      <li className="pi">
-        <section className="pi__icons">
-          <button
-            title="Haz click aquí para eliminar este proyecto"
-            onClick={handleDeleteProject}
-          >
-            <i className="fa-regular fa-circle-xmark"></i>
-          </button>
-          <button
+    <li className="pi">
+      <section className="pi__icons">
+        <button
+          title="Haz click aquí para eliminar este proyecto"
+          onClick={handleDeleteProject}
+        >
+          {" "}
+          x{/* <i className="fa-regular fa-circle-xmark"></i> */}
+        </button>
+        {/* <a
             title="Haz click aquí para editar este proyecto"
-            onClick={handleEditProject}
+            
           >
             <i className="fa-regular fa-pen-to-square"></i>
-          </button>
-        </section>
+          </a> */}
+      </section>
+      <a href={url}>
         <section className="author">
           <section className="author__ip">
             <p className="author__ip__subtitle">{eachCard.name}</p>
@@ -63,8 +68,8 @@ const ProjectItem = ({ eachCard, allCards, index }) => {
             </p>
           </section>
         </section>
-      </li>
-    </a>
+      </a>
+    </li>
   );
 };
 

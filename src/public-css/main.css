@@ -1277,7 +1277,7 @@ html {
 .container__landing-detailcard .preview .image {
     height: 40%;
     object-fit: cover;
-    width: 80%
+    width: 100%; 
 }
 
 @media (min-width:768px) {

@@ -73,12 +73,10 @@ function CreateProject({ allCards, handleLs }) {
         // Añado el nuevo proy
         ls.set("lastCard", data);
         //handleLs([...allCards, data]);
-
-        //ls.set("projectsLS", allCards);
+        //ls.set("projectsLS", allCards)
 
         console.log(url);
         console.log(data);
-
         console.log(allCards);
       } else if (info.error.includes("Mandatory")) {
         setCardMessage("");
@@ -96,6 +94,11 @@ function CreateProject({ allCards, handleLs }) {
         );
       }
     });
+  };
+
+  const handleClickDeleteCard = (ev) => {
+    ev.preventDefault();
+    api.deleteDataApi(data).then((info) => {});
   };
 
   const handleInput = (inputValue, inputName) => {
