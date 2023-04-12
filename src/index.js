@@ -9,9 +9,15 @@ app.use(express.json({ limit: "10mb" }));
 app.set("view engine", "ejs");
 
 const serverPort = process.env.PORT || 4000;
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+app.listen(serverPort, () => {
+  console.log(`App listening on port ${serverPort}`);
 });
+
+const swaggerUi = require("./swagger.json");
+const swaggerFile = require('./swagger.json');
+
+//Especificar en el server use
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 let connection;
 
