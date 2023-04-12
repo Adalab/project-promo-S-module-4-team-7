@@ -96,10 +96,6 @@ function CreateProject({ allCards, handleLs }) {
     });
   };
 
-  const handleClickDeleteCard = (ev) => {
-    ev.preventDefault();
-    api.deleteDataApi(data).then((info) => {});
-  };
 
   const handleInput = (inputValue, inputName) => {
     setData({ ...data, [inputName]: inputValue });

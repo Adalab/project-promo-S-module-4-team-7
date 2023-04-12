@@ -1,11 +1,13 @@
 import "../styles/layout/ProjectItem.scss";
 
-const ProjectItem = ({ eachCard, allCards, index }) => {
+const ProjectItem = ({ eachCard, allCards, index, handleClickDeleteCard }) => {
   const url =
     "http://localhost:4000/api/projects/detail/" + eachCard.idprojects;
 
   const handleDeleteProject = (ev) => {
+    ev.preventDefault();
     console.log("hola");
+    handleClickDeleteCard(eachCard);
   };
 
   return (

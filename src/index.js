@@ -124,8 +124,8 @@ app.get("/api/projects/detail/:projectID", (req, res) => {
 });
 
 // delete project
-app.delete("/api/projects/delete/:projectID", (req, res) => {
-  const projectID = req.params.projectID;
+app.delete("/api/projects/delete", (req, res) => {
+  const projectID = req.body.data.idprojects;
   let sql = "DELETE FROM projects WHERE idprojects = ?; ";
   connection
     .query(sql, [projectID])

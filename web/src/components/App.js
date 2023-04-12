@@ -17,6 +17,16 @@ function App() {
     });
   }, []);
 
+  const handleClickDeleteCard = (data) => {
+    console.log("elimina");
+    api.deleteDataApi(data).then((info) => {
+      //   console.log(info);
+      //   // api.listProjectsApi().then((cleanData) => {
+      //   //   setAllCards(cleanData);
+      //   // });
+    });
+  };
+
   const handleLs = (value) => {
     setAllCards(value);
   };
@@ -26,7 +36,15 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Landing allCards={allCards} />}></Route>
+      <Route
+        path="/"
+        element={
+          <Landing
+            allCards={allCards}
+            handleClickDeleteCard={handleClickDeleteCard}
+          />
+        }
+      ></Route>
       <Route path="/detailcard" element={<DetailCard></DetailCard>}></Route>
       <Route
         path="/create"
