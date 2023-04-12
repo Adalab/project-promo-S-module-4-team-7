@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json({ limit: "10mb" }));
 app.set("view engine", "ejs");
 
-const port = 4000;
+const serverPort = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
