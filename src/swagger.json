@@ -1,0 +1,124 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Proyectos Molones",
+    "description": "My User Project Application API"
+  },
+  "host": "localhost:4000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Proyectos Molones",
+      "description": "API CRUD para proyectso molones"
+    }
+  ],
+  "paths": {
+    "/api/projects/add": {
+      "post": {
+        "tags": ["Personal Project Cards"],
+        "description": "Crear un nuevo proyecto con toda su info",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "body",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "slogan",
+            "in": "body",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "technologies",
+            "in": "body",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "demo",
+            "in": "body",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "repo",
+            "in": "body",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "desc",
+            "in": "body",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "autor",
+            "in": "body",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "job",
+            "in": "body",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "image",
+            "in": "body",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "photo",
+            "in": "body",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/projects/all": {
+      "get": {
+        "tags": ["Personal Project Cards"],
+        "description": "Mostrar todos los proyectos",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/projects/detail/:projectID": {
+      "get": {
+        "tags": ["Personal Project Cards"],
+        "description": "Mostrar un proyecto",
+        "parameters": [
+          {
+            "name": "projectID",
+            "in": "path",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"]
+}

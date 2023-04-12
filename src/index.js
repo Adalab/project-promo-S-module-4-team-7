@@ -8,10 +8,16 @@ app.use(cors());
 app.use(express.json({ limit: "10mb" }));
 app.set("view engine", "ejs");
 
-const port = 4000;
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+const serverPort = process.env.PORT || 4000;
+app.listen(serverPort, () => {
+  console.log(`App listening on port ${serverPort}`);
 });
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('./swagger.json');
+
+//Especificar en el server use
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 let connection;
 
