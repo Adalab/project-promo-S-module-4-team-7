@@ -13,7 +13,7 @@ app.listen(serverPort, () => {
   console.log(`App listening on port ${serverPort}`);
 });
 
-const swaggerUi = require("./swagger.json");
+const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger.json');
 
 //Especificar en el server use
