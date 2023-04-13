@@ -30,10 +30,11 @@ let connection;
 
 async function getConnection() {
   const connection = await mysql.createConnection({
-    host: 'sql.freedb.tech',
-    database: 'freedb_Full Of Projects',
-    user: 'freedb_Base64',
-    password: 'HFpUad@JqahhC6d',
+    host: "sql.freedb.tech",
+    database: "freedb_grupo7",
+    user: "freedb_root_grupo7",
+    password: "KWuEnYU9W2Nc%5a",
+    idleTimeout: 1000000
   });
   await connection.connect();
 
