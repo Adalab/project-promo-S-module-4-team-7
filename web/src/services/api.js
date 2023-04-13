@@ -11,15 +11,14 @@ const dataApi = (data) => {
     });
 };
 
-const deleteDataApi = (data) => {
-  return fetch("http://localhost:4000/api/projects/delete", {
+const deleteDataApi = (params) => {
+  return fetch("http://localhost:4000/api/projects/delete/" + params, {
     method: "DELETE",
-    body: JSON.stringify(data),
-    headers: { "Content-type": "application/json" },
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      console.log("Params:");
+      console.log(params);
       return data;
     });
 };

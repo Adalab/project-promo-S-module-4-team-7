@@ -2,8 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2/promise");
 
-
-
 const app = express();
 app.use(cors());
 
@@ -15,11 +13,11 @@ app.listen(serverPort, () => {
   console.log(`App listening on port ${serverPort}`);
 });
 
-const swaggerUi = require('swagger-ui-express');
-const swaggerFile = require('./swagger.json');
+const swaggerUi = require("swagger-ui-express");
+const swaggerFile = require("./swagger.json");
 
 //Especificar en el server use
-app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 let connection;
 
@@ -132,8 +130,8 @@ app.get("/api/projects/detail/:projectID", (req, res) => {
 });
 
 // delete project
-app.delete("/api/projects/delete", (req, res) => {
-  const projectID = req.body.data.idprojects;
+app.delete("/api/projects/delete/:projectID", (req, res) => {
+  const projectID = req.params.projectID;
   let sql = "DELETE FROM projects WHERE idprojects = ?; ";
   connection
     .query(sql, [projectID])
@@ -148,4 +146,3 @@ app.delete("/api/projects/delete", (req, res) => {
 
 app.use(express.static("./src/public-react"));
 app.use(express.static("./src/public-css/"));
-

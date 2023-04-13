@@ -17,13 +17,10 @@ function App() {
     });
   }, []);
 
-  const handleClickDeleteCard = (data) => {
-    console.log("elimina");
-    api.deleteDataApi(data).then((info) => {
-      //   console.log(info);
-      //   // api.listProjectsApi().then((cleanData) => {
-      //   //   setAllCards(cleanData);
-      //   // });
+  const handleClickDeleteCard = (params) => {
+    console.log("RECARGA LA PÁGINA");
+    api.listProjectsApi().then((cleanData) => {
+      setAllCards(cleanData);
     });
   };
 
