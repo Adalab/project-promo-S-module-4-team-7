@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2/promise");
 
+
+
 const app = express();
 app.use(cors());
 
@@ -146,3 +148,4 @@ app.delete("/api/projects/delete/:projectID", (req, res) => {
 
 app.use(express.static("./src/public-react"));
 app.use(express.static("./src/public-css/"));
+
