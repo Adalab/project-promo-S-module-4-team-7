@@ -48,10 +48,10 @@ function CreateProject({ allCards, handleLs }) {
     /^((https?|ftp|file):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
 
   const updateImages = (avatar) => {
-    setData({ ...data, image: avatar });
+    setData({ ...data, photo: avatar });
   };
   const updatePhoto = (avatar) => {
-    setData({ ...data, photo: avatar });
+    setData({ ...data, image: avatar });
   };
 
   // Funciones handle
