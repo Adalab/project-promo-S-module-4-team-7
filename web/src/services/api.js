@@ -1,5 +1,5 @@
 const dataApi = (data) => {
-  return fetch("http://localhost:4000/api/projects/add", {
+  return fetch("https://proyectos-molones.onrender.com/api/projects/add", {
     method: "POST",
     body: JSON.stringify(data),
     headers: { "Content-type": "application/json" },
@@ -12,7 +12,7 @@ const dataApi = (data) => {
 };
 
 const deleteDataApi = (params) => {
-  return fetch("http://localhost:4000/api/projects/delete/" + params, {
+  return fetch("https://proyectos-molones.onrender.com/api/projects/delete/" + params, {
     method: "DELETE",
   })
     .then((response) => response.json())
@@ -24,7 +24,7 @@ const deleteDataApi = (params) => {
 };
 
 const listProjectsApi = () => {
-  return fetch("http://localhost:4000/api/projects/all")
+  return fetch("https://proyectos-molones.onrender.com/api/projects/all")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
