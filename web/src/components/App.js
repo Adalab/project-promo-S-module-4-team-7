@@ -17,6 +17,12 @@ function App({ eachCard }) {
     });
   }, []);
 
+  const refreshPage = () => {
+    api.listProjectsApi().then((cleanData) => {
+      setAllCards(cleanData);
+    });
+  }
+
   const handleClickDeleteCard = (eachCard) => {
     console.log("RECARGA LA PÁGINA");
     api.deleteDataApi(eachCard).then((info) => {
@@ -49,7 +55,7 @@ function App({ eachCard }) {
       <Route path="/detailcard" element={<DetailCard></DetailCard>}></Route>
       <Route
         path="/create"
-        element={<CreateProject allCards={allCards} handleLs={handleLs} />}
+        element={<CreateProject allCards={allCards} handleLs={handleLs} refreshPage={refreshPage} />}
       ></Route>
       <Route path="*" element={<Error404></Error404>}></Route>
     </Routes>

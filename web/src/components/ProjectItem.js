@@ -18,21 +18,7 @@ const ProjectItem = ({ eachCard, allCards, index, handleClickDeleteCard }) => {
 
   return (
     <li className="pi">
-      <section className="pi__icons">
-        <button
-          title="Haz click aquí para eliminar este proyecto"
-          onClick={handleDeleteProject}
-        >
-          {" "}
-          x{/* <i className="fa-regular fa-circle-xmark"></i> */}
-        </button>
-        {/* <a
-            title="Haz click aquí para editar este proyecto"
-            
-          >
-            <i className="fa-regular fa-pen-to-square"></i>
-          </a> */}
-      </section>
+      
       <a href={url}>
         <section className="author">
           <section className="author__ip">
@@ -77,6 +63,21 @@ const ProjectItem = ({ eachCard, allCards, index, handleClickDeleteCard }) => {
           </section>
         </section>
       </a>
+      <section className="pi__icons">
+        <button
+          className="button-reset"
+          title="Haz click aquí para eliminar este proyecto"
+          onClick={handleDeleteProject}
+        >
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+        {/* <a
+            title="Haz click aquí para editar este proyecto"
+            
+          >
+            <i className="fa-regular fa-pen-to-square"></i>
+          </a> */}
+      </section>
     </li>
   );
 };

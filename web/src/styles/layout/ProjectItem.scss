@@ -9,15 +9,28 @@
     
     
 }
-.pi__icons{
+
+.pi__icons {
     display: flex;
     flex-direction: column;
-    color:rgb(255, 255, 255); 
+    color: rgb(255, 255, 255);
     font-size: 20px;
-    margin-left: 10px;
-    gap:10px; 
-    transform: translateY(30px);
+    // margin-left: 10px;
+    // gap: 10px;
+    // transform: translateY(30px);
+    width: 30px;
 }
+
+// .pi__icons{
+//     display: flex;
+//     flex-direction: column;
+//     color:rgb(255, 255, 255); 
+//     font-size: 20px;
+//     margin-left: 10px;
+//     gap:10px; 
+//     transform: translateY(30px);
+//     width: 30px;
+// }
 
 
 // .fa-pen-to-square{

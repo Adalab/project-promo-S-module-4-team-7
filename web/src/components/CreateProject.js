@@ -10,7 +10,7 @@ import GetAvatar from "./GetAvatar";
 import ls from "../services/localStorage";
 import IntroCreateProject from "./IntroCreateProject";
 
-function CreateProject({ allCards, handleLs }) {
+function CreateProject({ allCards, handleLs, refreshPage }) {
   const [data, setData] = useState(
     ls.get("lastCard", {
       name: "",
@@ -93,6 +93,7 @@ function CreateProject({ allCards, handleLs }) {
           "Se ha producido un error. Por favor, inténtalo más tarde "
         );
       }
+      refreshPage();
     });
   };
 
