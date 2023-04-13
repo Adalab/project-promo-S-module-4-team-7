@@ -18,7 +18,6 @@ const ProjectItem = ({ eachCard, allCards, index, handleClickDeleteCard }) => {
 
   return (
     <li className="pi">
-      
       <a href={url}>
         <section className="author">
           <section className="author__ip">
@@ -63,21 +62,20 @@ const ProjectItem = ({ eachCard, allCards, index, handleClickDeleteCard }) => {
           </section>
         </section>
       </a>
-      <section className="pi__icons">
-        <button
-          className="button-reset"
-          title="Haz click aquí para eliminar este proyecto"
-          onClick={handleDeleteProject}
-        >
-          <i class="fa-regular fa-trash-can"></i>
-        </button>
-        {/* <a
+
+      <button
+        className="button-delete"
+        title="Haz click aquí para eliminar este proyecto"
+        onClick={handleDeleteProject}
+      >
+        <i class="fa-regular fa-trash-can"></i>
+      </button>
+      {/* <a
             title="Haz click aquí para editar este proyecto"
             
           >
             <i className="fa-regular fa-pen-to-square"></i>
           </a> */}
-      </section>
     </li>
   );
 };

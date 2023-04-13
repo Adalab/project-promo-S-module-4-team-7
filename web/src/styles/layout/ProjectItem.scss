@@ -36,3 +36,24 @@
 // .fa-pen-to-square{
 //     color:rgb(255, 255, 255); 
 // }
+
+.button-delete {
+    
+    color: $color-white;
+    background-color: #907ba2;
+    border-radius: 42px;
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    min-width: 30px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0 5px;
+    font-weight: bold;
+    margin-top: -40px;
+    margin-left: 70px;
+    margin-bottom: 40px;
+  }
+  
