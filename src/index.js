@@ -100,7 +100,7 @@ app.post("/api/projects/add", (req, res) => {
       connection.query(sqlProjects, valuesProject).then(([results, fields]) => {
         let response = {
           success: true,
-          cardURL: `http://localhost:4000/api/projects/${results.insertId}`,
+          cardURL: `http://localhost:4000/api/projects/detail/${results.insertId}`,
         };
         console.log(results);
         res.json(response);
