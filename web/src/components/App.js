@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import DetailCard from "./DetailCard";
 import api from "../services/api";
 
-function App() {
+function App({ eachCard }) {
   const [allCards, setAllCards] = useState([]);
 
   useEffect(() => {
@@ -17,10 +17,13 @@ function App() {
     });
   }, []);
 
-  const handleClickDeleteCard = (params) => {
+  const handleClickDeleteCard = (eachCard) => {
     console.log("RECARGA LA PÁGINA");
-    api.listProjectsApi().then((cleanData) => {
-      setAllCards(cleanData);
+    api.deleteDataApi(eachCard).then((info) => {
+      console.log("elimina en PItem");
+      api.listProjectsApi().then((cleanData) => {
+        setAllCards(cleanData);
+      });
     });
   };
 
@@ -39,6 +42,7 @@ function App() {
           <Landing
             allCards={allCards}
             handleClickDeleteCard={handleClickDeleteCard}
+            eachCard={eachCard}
           />
         }
       ></Route>

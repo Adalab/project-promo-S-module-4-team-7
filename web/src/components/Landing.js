@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import ProjectList from "./ProjectList";
 import IntroLanding from "./IntroLanding";
 
-function Landing({ allCards, handleClickDeleteCard}) {
+function Landing({ allCards, handleClickDeleteCard, eachCard }) {
   console.log(allCards);
 
   return (
@@ -14,7 +14,11 @@ function Landing({ allCards, handleClickDeleteCard}) {
         <Header />
         <main className="main__landing">
           <IntroLanding />
-          <ProjectList allCards={allCards} handleClickDeleteCard={handleClickDeleteCard} />
+          <ProjectList
+            allCards={allCards}
+            handleClickDeleteCard={handleClickDeleteCard}
+            eachCard={eachCard}
+          />
         </main>
       </div>
       <Footer />

@@ -13,10 +13,7 @@ const ProjectItem = ({ eachCard, allCards, index, handleClickDeleteCard }) => {
 
   const handleDeleteProject = (ev) => {
     ev.preventDefault();
-    api.deleteDataApi(eachCard.idprojects).then((info) => {
-      console.log("elimina en PItem");
-    });
-    handleClickDeleteCard();
+    handleClickDeleteCard(eachCard.idprojects);
   };
 
   return (
