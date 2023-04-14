@@ -116,6 +116,25 @@
           }
         }
       }
+    },
+    "/api/projects/delete/:projectID": {
+      "delete": {
+        "tags": ["Personal Project Cards"],
+        "description": "Eliminar un proyecto",
+        "parameters": [
+          {
+            "name": "projectID",
+            "in": "path",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "schemes": ["http"],
