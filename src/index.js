@@ -151,7 +151,7 @@ app.post("/api/projects/add", async (req, res) => {
       const [resultsInsert] = await connection.query(sqlProjects, valuesProject);
       let response = {
           success: true,
-          cardURL: `https://proyectos-molones.onrender.com/api/projects/detail/${resultsInsert.insertId}`,
+          cardURL: `http://localhost:4000/api/projects/detail/${resultsInsert.insertId}`,
         };
         console.log(results);
         res.json(response);

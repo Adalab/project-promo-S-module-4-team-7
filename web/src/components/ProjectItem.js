@@ -3,7 +3,7 @@ import api from "../services/api";
 
 const ProjectItem = ({ eachCard, allCards, index, handleClickDeleteCard }) => {
   const url =
-    "https://proyectos-molones.onrender.com/api/projects/detail/" + eachCard.idprojects;
+    "http://localhost:4000/api/projects/detail/" + eachCard.idprojects;
 
   // const handleDeleteProject = (ev) => {
   //   ev.preventDefault();
